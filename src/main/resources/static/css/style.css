@@ -6,45 +6,21 @@
     text-align: center;
 }
 
-.tg {
-    border-collapse: collapse;
-    border-color: #9ABAD9;
-    border-spacing: 0;
-}
-
-.tg td {
-    background-color: #EBF5FF;
-    border-color: #9ABAD9;
-    border-style: solid;
-    border-width: 0;
-    color: #444;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    overflow: hidden;
-    padding: 10px 5px;
-    word-break: normal;
-}
-
-button {
-    background-color: darkseagreen;
+.button {
+    background-color: cadetblue;
     color: aliceblue;
     border: none;
     border-radius: 10px;
     width: fit-content;
     height: auto;
     padding: 5px;
-    margin: 7px;
     align-self: center;
 }
 
-button:hover {
-    background-color: darkgreen;
+.button:hover {
+    background-color: lightgreen;
+    color: cornflowerblue;
     cursor: pointer;
-}
-
-a {
-    text-decoration: none;
-    width: fit-content;
 }
 
 .tg th {
@@ -68,10 +44,9 @@ a {
     vertical-align: top
 }
 
-#employeeContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center
+.employeeContainer {
+    border-radius: 100px;
+    padding: 25px;
 }
 
 h2 {
