@@ -1,5 +1,6 @@
 package me.rallings.javaday25crud_db.controller;
 
+import me.rallings.javaday25crud_db.model.Employee;
 import me.rallings.javaday25crud_db.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,5 +17,12 @@ public class EmployeeController {
     public String viewHomePage(Model model) {
         model.addAttribute("listEmployees", employeeService.getAllEmployees());
         return "index";
+    }
+
+    @GetMapping("/showNewEmployeeForm")
+    public String showNewEmployeeForm(Model model){
+        Employee employee = new Employee();
+        model.addAttribute("employee", employee);
+        return "new_employee";
     }
 }
