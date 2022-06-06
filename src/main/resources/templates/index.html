@@ -27,7 +27,8 @@
                 <td th:text="${employee.firstName}"></td>
                 <td th:text="${employee.lastName}"></td>
                 <td th:text="${employee.email}"></td>
-                <td><a th:href = "@{/showFormForUpdate/{id}(id=${employee.id})}" ><button class="button">Update</button></a></td>
+                <td><a th:href = "@{/showFormForUpdate/{id}(id=${employee.id})}" ><button class="buttonUpdate">Update</button></a></td>
+                <td><a th:href = "@{/deleteEmployee/{id}(id=${employee.id})}" ><button class="buttonDelete">Delete</button></a></td>
             </tr>
             </tbody>
         </table>
