@@ -50,10 +50,10 @@ public class EmployeeController {
     @GetMapping("/page/{pageNo}")
     public String findPaginated(@PathVariable(value = "pageNo") int pageNo,
                                 @RequestParam(value = "sortField") String sortField,
-                                @RequestParam(value = "sortDirection") String sortDirection,
+                                @RequestParam(value = "sortDirection") String sortDir,
                                 Model model){
         int pageSize = 7;
-        Page<Employee> page = employeeService.findPaginated(pageNo, pageSize, sortField, sortDirection);
+        Page<Employee> page = employeeService.findPaginated(pageNo, pageSize, sortField, sortDir);
         List<Employee> listEmployees = page.getContent();
 
         model.addAttribute("currentPage", pageNo);
@@ -61,8 +61,8 @@ public class EmployeeController {
         model.addAttribute("totalItems", page.getTotalElements());
 
         model.addAttribute("sortField", sortField);
-        model.addAttribute("sortDirection", sortDirection);
-        model.addAttribute("reverseSortDirection", sortDirection.equals("asc")?"desc":"asc");
+        model.addAttribute("sortDirection", sortDir);
+        model.addAttribute("reverseSortDirection", sortDir.equals("asc")?"desc":"asc");
 
         model.addAttribute("listEmployees", listEmployees);
         return "index";
