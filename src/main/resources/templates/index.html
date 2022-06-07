@@ -9,13 +9,14 @@
 </head>
 
 <body>
-<nav class="row justify-content-around align-items-center p-2">
-    <h2 class="col-10 pr-0">Employee Management System</h2>
+<nav class="row justify-content-end align-items-center p-2">
+    <div class="col-10 pr-0 text-right"><h2>Employee Management System</h2></div>
     <div class="col">
-        <div class="row align-items-center text-center" id="welcome">
-            Welcome, <span sec:authentication="principal.username"> User</span>
+        <div class="row justify-content-center align-items-center" id="welcome">
+            <p>Welcome,</p>
+            <p sec:authentication="principal.username"> User</p>
         </div>
-        <div class="row align-items-center text-center">
+        <div class="row justify-content-center align-items-center">
             <span sec:authorize="isAuthenticated()"><a th:href="@{/logout}"><button class="buttonLogout">Logout</button></a></span>
         </div>
     </div>

@@ -62,6 +62,7 @@ nav {
 }
 
 #welcome {
+    font-size: small;
     font-weight: bolder;
     color: aquamarine;
 }
