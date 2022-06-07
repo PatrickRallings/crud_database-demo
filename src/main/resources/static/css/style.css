@@ -37,10 +37,33 @@
     align-self: center;
 }
 
+.buttonLogout {
+    background-color: darkred;
+    color: aliceblue;
+    border: none;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: fit-content;
+    height: auto;
+    align-self: center;
+}
+
 .button:hover {
     background-color: black;
     color: cornflowerblue;
     cursor: pointer;
+}
+
+nav {
+    background-color:cadetblue;
+    color: white;
+    border-bottom: 2px solid darkslateblue;
+}
+
+#welcome {
+    font-weight: bolder;
+    color: aquamarine;
 }
 
 .tg th {
