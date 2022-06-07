@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Employee Management System</title>
@@ -9,6 +9,17 @@
 </head>
 
 <body>
+<nav class="row justify-content-around align-items-center p-2">
+    <h2 class="col-10 pr-0">Employee Management System</h2>
+    <div class="col">
+        <div class="row align-items-center text-center" id="welcome">
+            Welcome, <span sec:authentication="principal.username"> User</span>
+        </div>
+        <div class="row align-items-center text-center">
+            <span sec:authorize="isAuthenticated()"><a th:href="@{/logout}"><button class="buttonLogout">Logout</button></a></span>
+        </div>
+    </div>
+</nav>
 <div class="pageContainer row justify-content-center">
 <div class="col-6 mt-5" id="employeeContainer">
     <h2>Employees</h2>
